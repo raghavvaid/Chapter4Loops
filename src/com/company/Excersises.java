@@ -26,7 +26,6 @@ public class Excersises {
     }
 
 
-
     public static int howManyYears(double startpop, double endpop){
         double x = startpop;
         int year = 0;
@@ -37,22 +36,67 @@ public class Excersises {
         return year;
     }
 
+
+    public static void printSum(int n){
+        int x = 1;
+        int sum = 0;
+        while (x <= n){
+                System.out.print(x + " + " );
+                sum += x;
+                x++;
+        }
+        System.out.print("= " + sum);
+    }
+
+    public static boolean isPerfectSquare(int a){
+        int x = 0;
+        int sum = 0;
+        while (x <= a){
+           addOdds(a);
+        }
+        if (sum == a){
+            return true;
+        }
+        else return false;
+    }
+
+
     public static void main(String[] args) {
+        System.out.println(" ");
+        System.out.println("addOdds: ");
         System.out.println(addOdds(10));
         System.out.println(addOdds(5));
         System.out.println(addOdds(4));
 
         System.out.println(" ");
+        System.out.println("sumDigits: ");
 
         System.out.println(sumDigits(257));
         System.out.println(sumDigits(103));
         System.out.println(sumDigits(9286));
 
         System.out.println(" ");
+        System.out.println("howManyYears: ");
 
         System.out.println(howManyYears(111.2, 120));
         System.out.println(howManyYears(111.2, 150));
 
+        System.out.println(" ");
+        System.out.println("printSum: ");
+
+        printSum(6);
+        System.out.println(" ");
+        printSum(8);
+        System.out.println(" ");
+        printSum(11);
+
+        System.out.println(" ");
+        System.out.println("isPerfectSquare: ");
+
+        System.out.println(isPerfectSquare(25));
+        System.out.println(isPerfectSquare(49));
+        System.out.println(isPerfectSquare(11));
+        System.out.println(isPerfectSquare(55));
 
     }
 }
