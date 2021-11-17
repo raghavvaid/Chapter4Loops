@@ -49,12 +49,13 @@ public class Excersises {
     }
 
     public static boolean isPerfectSquare(int a){
-        int x = 0;
-        int sum = 0;
-        while (x <= a){
-           addOdds(a);
+        int x = 1;
+        int sqrt = 0;
+        while (addOdds(x) <= a){
+           x+=2;
+           sqrt++;
         }
-        if (sum == a){
+        if (sqrt*sqrt == a){
             return true;
         }
         else return false;
@@ -90,6 +91,7 @@ public class Excersises {
         System.out.println(" ");
         printSum(11);
 
+        System.out.println(" ");
         System.out.println(" ");
         System.out.println("isPerfectSquare: ");
 
